@@ -1,42 +1,42 @@
-const containerCards = document.querySelector('.cards__container');
-const leftButton = document.querySelector('.left-button');
-const rightButton = document.querySelector('.right-button');
-const container = document.querySelector('#container');
+const containerCards = document.querySelector(".cards__container");
+const leftButton = document.querySelector(".left-button");
+const rightButton = document.querySelector(".right-button");
+const container = document.querySelector("#container");
 
 let isDown = false;
 let startX;
 let scrollLeft;
 
-container.addEventListener('mousedown', (e) => {
+container.addEventListener("mousedown", (e) => {
   isDown = true;
-  container.classList.add('active');
+  container.classList.add("active");
   startX = e.pageX - container.offsetLeft;
   scrollLeft = container.scrollLeft;
 });
 
-container.addEventListener('touchstart', (e) => {
+container.addEventListener("touchstart", (e) => {
   isDown = true;
-  container.classList.add('active');
+  container.classList.add("active");
   startX = e.touches[0].pageX - container.offsetLeft;
   scrollLeft = container.scrollLeft;
 });
 
-container.addEventListener('mouseleave', () => {
+container.addEventListener("mouseleave", () => {
   isDown = false;
-  container.classList.remove('active');
+  container.classList.remove("active");
 });
 
-container.addEventListener('touchend', () => {
+container.addEventListener("touchend", () => {
   isDown = false;
-  container.classList.remove('active');
+  container.classList.remove("active");
 });
 
-container.addEventListener('mouseup', () => {
+container.addEventListener("mouseup", () => {
   isDown = false;
-  container.classList.remove('active');
+  container.classList.remove("active");
 });
 
-container.addEventListener('touchmove', (e) => {
+container.addEventListener("touchmove", (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.touches[0].pageX - container.offsetLeft;
@@ -44,7 +44,7 @@ container.addEventListener('touchmove', (e) => {
   container.scrollLeft = scrollLeft - walk;
 });
 
-container.addEventListener('mousemove', (e) => {
+container.addEventListener("mousemove", (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - container.offsetLeft;
@@ -52,29 +52,29 @@ container.addEventListener('mousemove', (e) => {
   container.scrollLeft = scrollLeft - walk;
 });
 
-leftButton.addEventListener('click', () => {
+leftButton.addEventListener("click", () => {
   containerCards.scrollBy({
-    left: -300, 
-    behavior: 'smooth'
+    left: -300,
+    behavior: "smooth",
   });
 });
 
-rightButton.addEventListener('click', () => {
+rightButton.addEventListener("click", () => {
   containerCards.scrollBy({
-    left: 300, 
-    behavior: 'smooth'
+    left: 300,
+    behavior: "smooth",
   });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const menuIcon = document.querySelector('.header__menu-icon');
-  const sideMenu = document.querySelector('.header__side-menu__content');
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.querySelector(".header__menu-icon");
+  const sideMenu = document.querySelector(".header__side-menu__content");
 
-  menuIcon.addEventListener('click', function () {
-    if (sideMenu.style.display === 'block') {
-      sideMenu.style.display = 'none';
+  menuIcon.addEventListener("click", function () {
+    if (sideMenu.style.display === "block") {
+      sideMenu.style.display = "none";
     } else {
-      sideMenu.style.display = 'block';
+      sideMenu.style.display = "block";
     }
   });
 });

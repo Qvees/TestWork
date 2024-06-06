@@ -955,9 +955,9 @@
     align-items: center;
     justify-content: center;
   }
-  .header__nav{
+  .header__nav {
     display: grid;
-    grid-template-columns: repeat(6,auto);
+    grid-template-columns: repeat(6, auto);
     width: 100%;
   }
 
@@ -1015,15 +1015,15 @@
     justify-content: center;
   }
 
-  .footer__sign-up-for-interview__content{
+  .footer__sign-up-for-interview__content {
     padding: 0;
     justify-content: center;
   }
 
-  .main__development-and-growth__text-container{
-    padding-left:20px;
+  .main__development-and-growth__text-container {
+    padding-left: 20px;
   }
-  .main__development-and-growth__title{
+  .main__development-and-growth__title {
     padding-left: 20px;
   }
 }
@@ -1105,24 +1105,22 @@
   .footer__sign-up-for-interview__button--sign-up {
     max-width: 270px;
   }
-  .footer__sign-up-for-interview__input--container{
+  .footer__sign-up-for-interview__input--container {
     width: 100%;
   }
 
-  .footer__sign-up-for-interview__content{
-      width: 100%;
-      max-width: 640px;
-      padding-left: 25px;
-   }
+  .footer__sign-up-for-interview__content {
+    width: 100%;
+    max-width: 640px;
+    padding-left: 25px;
+  }
 }
 
 @media (max-width: 420px) {
-
-  .main__development-and-growth__text-containerr{
+  .main__development-and-growth__text-containerr {
     gap: 5px;
-    
   }
-  .main__development-and-growth__paragraph2{
+  .main__development-and-growth__paragraph2 {
     max-height: none;
   }
   .footer__sign-up-for-interview__title {
@@ -1137,15 +1135,14 @@
     width: 100%;
     max-width: 390px;
   }
-  .footer__sign-up-for-interview__your--questions{
+  .footer__sign-up-for-interview__your--questions {
     width: 100%;
     max-width: 390px;
     height: 108px;
   }
-  .footer__sign-up-for-interview__content{
+  .footer__sign-up-for-interview__content {
     padding: 0;
     justify-content: center;
-
   }
   .footer__sign-up-for-interview__title {
     font-size: 24px;
@@ -1176,14 +1173,13 @@
     margin-left: 20px;
   }
 
-  .footer__sign-up-for-interview__title{
+  .footer__sign-up-for-interview__title {
     width: 100%;
     line-height: 30px;
     font-size: 20px;
     padding-top: 0px;
-
   }
-  .footer__sign-up-for-interview__content{
+  .footer__sign-up-for-interview__content {
     padding-left: 0;
     justify-content: center;
     align-items: center;
