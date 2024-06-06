@@ -746,10 +746,12 @@
 
 .footer__sign-up-for-interview__input--container {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: 568px;
   flex-direction: column;
   padding: 45px 10px 0px 0;
-  width: 568px;
+  width: 100%;
+  max-width: 568px;
   gap: 5px;
 }
 
@@ -827,7 +829,7 @@
   text-align: left;
   color: var(--color-light);
   padding: 5px 0 10px 0;
-  gap: 5px;
+  margin: -5px 0 0 -15px;
 }
 
 .footer__sign-up-for-interview__checkbox {
