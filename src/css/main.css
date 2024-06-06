@@ -1016,6 +1016,8 @@
   }
 
   .footer__sign-up-for-interview__content{
+    padding: 0;
+    justify-content: center;
   }
 
   .main__development-and-growth__text-container{
@@ -1103,10 +1105,14 @@
   .footer__sign-up-for-interview__button--sign-up {
     max-width: 270px;
   }
+  .footer__sign-up-for-interview__input--container{
+    width: 100%;
+  }
 
   .footer__sign-up-for-interview__content{
       width: 100%;
       max-width: 640px;
+      padding-left: 25px;
    }
 }
 
@@ -1129,6 +1135,8 @@
     height: 108px;
   }
   .footer__sign-up-for-interview__content{
+    padding: 0;
+    justify-content: center;
 
   }
   .footer__sign-up-for-interview__title {
