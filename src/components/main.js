@@ -57,14 +57,14 @@ console.log(containerCards,leftButton,rightButton)
 
 leftButton.addEventListener('click', () => {
   containerCards.scrollBy({
-    left: -100, 
+    left: -300, 
     behavior: 'smooth'
   });
 });
 
 rightButton.addEventListener('click', () => {
   containerCards.scrollBy({
-    left: 100, 
+    left: 300, 
     behavior: 'smooth'
   });
 });
