@@ -747,7 +747,7 @@
 .footer__sign-up-for-interview__input--container {
   position: relative;
   display: grid;
-  grid-template-columns: 568px;
+  grid-template-columns: auto;
   flex-direction: column;
   padding: 45px 10px 0px 0;
   width: 100%;
