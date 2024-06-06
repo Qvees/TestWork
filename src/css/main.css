@@ -952,6 +952,13 @@
 @media (max-width: 850px) {
   .header {
     background-color: var(--color-light);
+    align-items: center;
+    justify-content: center;
+  }
+  .header__nav{
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    width: 100%;
   }
 
   .header__link,
@@ -1006,6 +1013,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .footer__sign-up-for-interview__content{
+  }
+
+  .main__development-and-growth__text-container{
+    padding-left:20px;
+  }
+  .main__development-and-growth__title{
+    padding-left: 20px;
   }
 }
 
@@ -1076,6 +1093,7 @@
   }
   .footer__sign-up-for-interview {
     padding: 0 20px 0 20px;
+    width: 100%;
   }
   .footer__sign-up-for-interview__buttons {
     flex-direction: column;
@@ -1085,6 +1103,11 @@
   .footer__sign-up-for-interview__button--sign-up {
     max-width: 270px;
   }
+
+  .footer__sign-up-for-interview__content{
+      width: 100%;
+      max-width: 640px;
+   }
 }
 
 @media (max-width: 420px) {
@@ -1097,7 +1120,16 @@
 }
 @media (max-width: 640px) {
   .footer__sign-up-for-interview__input--container {
-    margin-left: 10px;
+    width: 100%;
+    max-width: 390px;
+  }
+  .footer__sign-up-for-interview__your--questions{
+    width: 100%;
+    max-width: 390px;
+    height: 108px;
+  }
+  .footer__sign-up-for-interview__content{
+
   }
   .footer__sign-up-for-interview__title {
     font-size: 24px;
@@ -1126,6 +1158,19 @@
   }
   .footer__sign-up-for-interview__category {
     margin-left: 20px;
+  }
+
+  .footer__sign-up-for-interview__title{
+    width: 100%;
+    line-height: 30px;
+    font-size: 20px;
+    padding-top: 0px;
+
+  }
+  .footer__sign-up-for-interview__content{
+    padding-left: 0;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -1450,7 +1495,6 @@
   }
 
   .footer__sign-up-for-interview__content {
-    padding-left:10px;
     margin: 20px 0 0 0;
     width: 354px;
     height: 671px;
@@ -1462,14 +1506,17 @@
     text-align: center;
     padding: 20px 0 0 40px;
     white-space: pre-line;
-    max-width: 296px;
   }
 
   .footer__sign-up-for-interview__input--container {
+    margin: 0 0 0 20px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 296px;
     padding-top: 65px;
     gap: 5px;
+    padding-right: 0px;
   }
 
   .footer__sign-up-for-interview__input {
@@ -1482,15 +1529,17 @@
     font-weight: var(--font-weight-bold);
     line-height: 21.79px;
     text-align: left;
-    margin: 10px 0 0 20px;
+    margin: 15px 0 0 30px;
+    width: 100%;
+    max-width: 300px;
   }
   .icon,
   .icon2 {
     display: none;
   }
   .footer__sign-up-for-interview__category {
-    padding: 10px 0px 0px 0px;
-    margin: -5px 0 0 6px;
+    padding: 5px 0px 0px 0px;
+    margin: -5px 0 0 20px;
     gap: 0;
   }
   .footer__sign-up-for-interview__category-option {
@@ -1507,9 +1556,10 @@
     padding-top: 25px;
   }
   .footer__sign-up-for-interview__your--questions {
-    width: 295px;
+    width: 100%;
+    max-width: 295px;
     height: 50px;
-    margin: 15px 0 0 20px;
+    margin: 15px 0 0 30px;
     padding: 0;
   }
   .footer__sign-up-for-interview__button--resume {
