@@ -3,7 +3,8 @@
 .header__nav__profile,
 .header__nav__logo--mob,
 .header__side-menu__content,
-.header__side-menu {
+.header__side-menu,
+.footer__answers__list-item__title__mobile {
   display: none;
 }
 
@@ -686,6 +687,7 @@
   max-width: 800px;
 }
 .footer__answers__list-item__title {
+  display: block;
   font-family: var(--Open-Sans);
   font-size: var(--font-size-18);
   font-weight: var(--font-weight-normal);
@@ -1006,6 +1008,10 @@
 }
 
 @media (max-width: 700px) {
+  .footer__answers__list-item__paragraph,
+  .footer__answers__sub-list{
+    display: none;
+  }
   .main__welcome__title {
     font-size: 45px;
     line-height: 50.24px;
@@ -1071,12 +1077,57 @@
   }
   .footer__sign-up-for-interview__buttons {
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     align-items: center;
   }
   .footer__sign-up-for-interview__button--sign-up {
     max-width: 270px;
   }
+}
+
+@media (max-width:420px) {
+  .footer__sign-up-for-interview__title{
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+}
+@media (max-width:640px) {
+
+  .footer__sign-up-for-interview__input--container{
+    margin-left: 10px;
+  }
+  .footer__sign-up-for-interview__title{
+    font-size: 24px
+  }
+  .footer__sign-up-for-interview__category-label{
+    margin-left: 20px;
+  }
+  .footer__sign-up-for-interview__category{
+    margin-left: 20px;
+  }
+  
+}
+
+@media (max-width:580px) {
+  .footer__answers__list-item__paragraph, 
+  .footer__answers__sub-list{
+    display: none;
+  }
+.footer__answers__list-item__title{
+  display: block;
+}
+  .footer__answers__list{
+    grid-template-rows: repeat(4,1fr);
+  }
+  .footer__sign-up-for-interview__category-label{
+    margin-left: 20px;
+  }
+  .footer__sign-up-for-interview__category{
+    margin-left: 20px;
+  }
+  
 }
 
 @media (max-width: 375px) {
@@ -1091,8 +1142,6 @@
     gap: 12px;
     align-items: center;
     justify-content: center;
-  }
-  .header__nav__glass {
   }
   .header__nav__shop {
     padding-left: 25px;
@@ -1312,7 +1361,7 @@
   .card__items--container button {
     width: 198px;
     height: 40px;
-    margin: auto 0 20px 15px;
+    margin: auto auto 20px auto;
   }
 
   .footer__answers__list-item__paragraph,
@@ -1356,6 +1405,16 @@
   .footer__answers {
     height: 415px;
   }
+  .footer__answers__list-item__title{
+    display: none;
+  }
+  .footer__answers__list-item__title__mobile{
+    display: block;
+    height: 100%;
+    max-height: 50px;
+    width: 100%;
+    max-width: 324px;
+  }
 
   .footer__answers__title {
     padding: 35px 0 0 20px;
@@ -1376,8 +1435,8 @@
   .footer__answers__list-item:first-child {
     list-style-image: url("../assets/svg/mobileListMarker.svg");
   }
-  .footer__answers__list-item {
-    height: 50px;
+  #answersList > .footer__answers__list-item:nth-child(2){
+    margin-bottom: 15px;
   }
 
   .footer__sign-up-for-interview {
@@ -1416,8 +1475,12 @@
     text-align: left;
     margin: 5px 0 0 10px;
   }
+  .icon, .icon2{
+    display: none;
+  }
   .footer__sign-up-for-interview__category {
-    padding: 0 0 0 0;
+    padding: 10px 0px 0px 0px;
+    margin: -8px 0 0 6px;
     gap: 0;
   }
   .footer__sign-up-for-interview__category-option {
@@ -1429,24 +1492,34 @@
   .footer__sign-up-for-interview__checkbox {
     margin: 0 0 0 10px;
   }
+  .footer__sign-up-for-interview__buttons{
+    gap: 5px;
+    margin-top: 10px;
+  }
   .footer__sign-up-for-interview__your--questions {
     width: 295px;
     height: 50px;
-    margin-top: 20px;
+    margin: 20px 0 0 15px;
+    padding: 0;
   }
   .footer__sign-up-for-interview__button--resume {
     width: 100%;
     max-width: 296px;
     height: 50px;
-
     font-size: var(--font-size-18);
     font-weight: var(--font-weight-bold);
-    line-height: 24.51px;
-    text-align: left;
+    line-height: 24.51px;;
   }
   .footer__sign-up-for-interview__button--sign-up {
     width: 100%;
     max-width: 296px;
     height: 50px;
+  }
+}
+
+@media (max-width:360px) {
+
+  .footer__sign-up-for-interview{
+    padding: 0 0px 0px 3px;
   }
 }
