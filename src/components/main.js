@@ -1,5 +1,8 @@
+const containerCards = document.querySelector('.cards__container');
+const leftButton = document.querySelector('.left-button');
+const rightButton = document.querySelector('.right-button');
 const container = document.querySelector('#container');
-console.log(container)
+
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -48,12 +51,6 @@ container.addEventListener('mousemove', (e) => {
   const walk = (x - startX) * 1;
   container.scrollLeft = scrollLeft - walk;
 });
-
-
-const containerCards = document.querySelector('.cards__container');
-const leftButton = document.querySelector('.left-button');
-const rightButton = document.querySelector('.right-button');
-console.log(containerCards,leftButton,rightButton)
 
 leftButton.addEventListener('click', () => {
   containerCards.scrollBy({
