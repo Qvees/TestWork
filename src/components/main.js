@@ -172,3 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+function onSumbit(e){
+  alert('форма отправилась')
+}
