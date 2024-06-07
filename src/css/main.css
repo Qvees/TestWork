@@ -644,8 +644,7 @@
     rgba(39, 221, 209, 0.39) 57.4%,
     rgba(5, 176, 213, 0.32) 82.7%
   );
-  max-height: 810px;
-  height: 810px;
+  min-height: 810px;
 }
 
 .footer__answers__img {
@@ -705,7 +704,7 @@
   padding: 10px 0 0 26px;
   list-style: disc;
 }
-.footer__answers__sub-list span {
+.footer__answers__span {
   font-family: "Open Sans" sans-serif;
   font-size: var(--font-size-18);
   font-weight: var(--font-weight-bold);
@@ -713,6 +712,13 @@
   text-align: left;
   text-decoration: solid;
 }
+
+.footer__answers__list-item.active .footer__answers__sub-list,
+.footer__answers__list-item.active .footer__answers__list-item__paragraph{
+  display: none;
+
+}
+
 
 /* запись*/
 .footer__sign-up-for-interview {
@@ -771,17 +777,30 @@
   background-origin: padding-box, border-box;
   border-radius: 5px;
   border: 1px solid transparent;
+  padding-left: 15px;
+  font-family: var(--Open-Sans);
+  font-size: var(--font-size-18);
+  font-weight: 300;
+  line-height: 24.51px;
+  text-align: left;
+}
+
+.icon-container {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .icon {
-  position: absolute;
-  right: 5%;
-  top: 40%;
+  display: none;
 }
+
 .icon2 {
-  position: absolute;
-  right: 5%;
-  top: 61%;
+  display: none;
 }
 
 .footer__sign-up-for-interview__input::placeholder {
@@ -807,6 +826,23 @@
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
   border: 2px solid transparent;
+}
+
+.error-message {
+  font-family: var(--Open-Sans);
+  font-weight: 400;
+  color: black;
+  font-size: 14px;
+}
+
+@media (max-width: 375px) {
+  #errorMessages {
+    display: none;
+  }
+  .error-message {
+    padding-left: 10px;
+    font-size: 12px;
+  }
 }
 
 .footer__sign-up-for-interview__category-label {
@@ -872,7 +908,15 @@
   gap: 80px;
 }
 
+.footer__sign-up-for-interview__input-resume {
+  display: none;
+}
+
 .footer__sign-up-for-interview__button--resume {
+  display: inline-flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
   font-family: var(--Open-Sans);
   color: var(--color-secondary);
   font-size: var(--font-size-18);
@@ -887,6 +931,10 @@
   background-color: var(--color-light);
   text-align: center;
   transition: color 0.6s;
+}
+.footer__sign-up-for-inteview__clip--icon {
+  width: 30px;
+  height: 50px;
 }
 
 .footer__sign-up-for-interview__button--resume:hover {
@@ -1031,7 +1079,7 @@
 @media (max-width: 700px) {
   .footer__answers__list-item__paragraph,
   .footer__answers__sub-list {
-    display: none;
+  
   }
   .main__welcome__title {
     font-size: 45px;
@@ -1157,14 +1205,16 @@
 
 @media (max-width: 580px) {
   .footer__answers__list-item__paragraph,
-  .footer__answers__sub-list {
-    display: none;
+  .footer__answers__sub-list,
+  .footer__answers__span, 
+  .footer__answers__list-item__title {
+    font-size: calc(16px - 1vw)
   }
   .footer__answers__list-item__title {
     display: block;
   }
   .footer__answers__list {
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
   }
   .footer__sign-up-for-interview__category-label {
     margin-left: 20px;
@@ -1420,11 +1470,6 @@
     margin: auto auto 20px auto;
   }
 
-  .footer__answers__list-item__paragraph,
-  .footer__answers__sub-list {
-    display: none;
-  }
-
   .footer__job-application {
     display: flex;
     flex-direction: column;
@@ -1459,7 +1504,7 @@
   }
 
   .footer__answers {
-    height: 415px;
+    min-height: 415px;
   }
   .footer__answers__list-item__title {
     display: none;
@@ -1509,7 +1554,6 @@
   .footer__sign-up-for-interview__content {
     margin: 20px 0 0 0;
     width: 354px;
-    height: 671px;
   }
   .footer__sign-up-for-interview__title {
     font-size: 28px;
