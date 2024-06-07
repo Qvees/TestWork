@@ -6,6 +6,7 @@ const inputs = document.querySelectorAll(
   ".footer__sign-up-for-interview__input"
 );
 const phoneNumber = document.querySelector("#phone");
+const form = document.querySelector('.footer__sign-up-for-interview__content')
 
 let isDown = false;
 let startX;
@@ -161,7 +162,6 @@ function updateFileName(input) {
   }
 }
 
-
 document.addEventListener('DOMContentLoaded', function() {
   const accordionItems = document.querySelectorAll('.footer__answers__list-item');
 
@@ -176,4 +176,6 @@ document.addEventListener('DOMContentLoaded', function() {
 function onSumbit(e){
   alert('форма отправилась')
   e.preventDefault()
+  form.reset()
+
 }
